@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: rgb(28, 28, 29);
+}
+.container{
+    width: 100%;
+    text-align: center;
+}
+.main{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    margin-top: 30vh;
+}
+.sign > *:nth-child(1){
+    fill: transparent;
+    stroke-width: 0.3;
+    stroke: white;
+    stroke-dasharray: 765;
+    stroke-dashoffset: 765;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation: fillit 2s linear 2s  forwards;
+}
+.sign > *:nth-child(2){
+    fill: transparent;
+    stroke-width: 0.3;
+    stroke: white;
+    stroke-dasharray: 154;
+    stroke-dashoffset: 154;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation: fillit1 2s linear   forwards ;
+}
+
+@keyframes fillit{
+    0%{
+        stroke-dashoffset: 765;
+        
+    }
+    90%{
+        fill: transparent;
+    }
+    100%{
+        stroke-dashoffset: 0;
+        fill: white;
+    }
+}
+@keyframes fillit1{
+    0%{
+        stroke-dashoffset: 154;
+        
+    }
+    90%{
+        fill: transparent;
+    }
+    100%{
+        stroke-dashoffset: 0;
+        fill: white;
+    }
+}

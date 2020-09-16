@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(36, 36, 36);
+}
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.main{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: 5px solid rgb(136, 136, 136);
+    border-top:5px solid yellow ;
+    border-radius: 50%;
+    animation: rol 2s linear infinite;
+}
+.bolette{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 62px;
+    height: 4px;
+    background-color: transparent;
+    transform-origin: 0% 50%;
+    animation: rol2 2s linear infinite;
+}
+.bolette::before{
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: yellow;
+    top: -8px;
+    left: 100%;
+    box-shadow: 0px 0px 5px 1px yellow;
+    
+}
+.percent{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: yellow;
+    text-shadow: 0px 0px 4px yellow;
+}
+@keyframes rol{
+    0%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: rotate(405deg);
+    }
+}
+@keyframes rol2{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

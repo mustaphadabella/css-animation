@@ -1,0 +1,373 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    background-color: rgb(37, 37, 37);
+    height: 100vh;
+}
+.container{
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.btn{
+    position: relative;
+    border: 2px solid yellow;
+    cursor: pointer;
+    color: yellow;
+    margin: 30px 0px;
+    padding: 14px 60px;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: Calibri;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition:  0.6s all ease;
+}
+.btn1::before{
+    position: absolute;
+    content: "";    
+    background-color: yellow;    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -2;
+    transition: all 0.6s ease;
+}
+.btn:hover{
+    color: rgb(37, 37, 37);
+}
+.btn1::before{
+    width: 100%;
+    height: 0;
+    transform: translate(-50%,-50%) rotate(0deg);
+}
+.btn1:hover::before{
+    height: 350%;
+    transform: translate(-50%,-50%) rotate(-360deg);
+}
+
+.btn1 span{
+    opacity: 0;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    
+    border-radius: 50%;
+    z-index: -1;
+    
+    
+}
+#bul1{
+    top: 25%;
+    left: 8%;
+    background-color: red;
+}
+#bul2{
+    top: 25%;
+    left: 80%;
+    background-color: green;
+}
+#bul3{
+    top: -40%;
+    left: 43%;
+    background-color: blue;
+}
+.btn1:hover #bul1 {
+    animation: popo1 5s linear infinite;
+}
+.btn1:hover #bul2 {
+    animation: popo2 5s linear infinite;
+}
+.btn1:hover #bul3 {
+    animation: popo3 5s linear infinite;
+}
+.btn1:hover span{
+    opacity: 1;
+    transition:all 1s ease;
+}
+
+.btn2 span{
+    display: block;
+    position: absolute;
+    width: 51%;
+    height: 52%;
+    background-color: yellow;
+    z-index: -1;
+    transition: all 0.6s ease;
+}
+#part1{
+    top: -55%;
+    left: -55%;   
+}
+#part2{
+    top: -51%;
+    left: 101%; 
+}
+ #part3{
+    top: 101%;
+    left:-51%;
+}
+ #part4{
+    top: 101%;
+    left:101%;
+}
+.btn2:hover #part1{
+    top: 0%;
+    left: 0%;
+}
+.btn2:hover #part2{
+    top: 0%;
+    left: 50%;
+}
+.btn2:hover #part3{
+    top: 50%;
+    left: 0%;
+}
+.btn2:hover #part4{
+    top: 50%;
+    left: 50%;
+}
+
+
+.btn3 span{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 0.6s ease;
+}
+#bulette1{
+    top: -15px;
+    left: -15px;    
+}
+#bulette2{
+    top: -15px;
+    left: 93%;
+}
+ #bulette3{
+    top: 75%;
+    left: -15px;
+}
+ #bulette4{
+    top: 75%;
+    left: 93%;
+}
+.btn3:hover #bulette1{
+    transform: scale(11);
+}
+.btn3:hover #bulette2{
+    transform: scale(11);
+}
+.btn3:hover #bulette3{
+    transform: scale(11);
+}
+.btn3:hover #bulette4{
+    transform: scale(11);
+}
+.btn4{
+    color: rgb(37, 37, 37);
+}
+.btn4:hover{
+    color: yellow;
+}
+.btn4 span{
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: yellow;
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 0.6s ease;
+}
+.btn4:hover #circle{
+    width: 0;
+    height: 0;
+}
+
+#me{
+    display: inline-block;
+    height: 20px;
+}
+.btn5:hover{
+    background-color: yellow;
+}
+.btn5:hover #me{  
+    transform-origin: bottom left;  
+    transform: rotate(100deg);
+    transition: transform 2s ease;
+    animation: roo 3s 2s linear infinite;
+    
+}
+@keyframes roo{
+    0%{
+        transform: rotate(105deg);
+    }
+    60%{
+        transform: rotate(85deg);
+    }
+    100%{
+        transform: rotate(105deg);
+    }
+}
+@keyframes popo1{
+    0%{
+        background-color: red;
+        transform: scale(1.2);
+        top: 25%;
+    left: 8%;
+    }
+    40%{
+        background-color: green;
+        transform: scale(1.6);
+        top: 35%;
+    left: 90%;
+    }
+    80%{
+        background-color: blue;
+        transform: scale(0.6);
+        top: -20%;
+    left: 3%;
+    }
+    100%{
+        background-color: red;
+        transform: scale(1.2);
+        top: 25%;
+    left: 8%;
+    }
+}
+@keyframes popo2{
+    0%{
+        background-color: green;
+        transform: scale(0.9);
+        top: 25%;
+    left: 80%;
+    }
+    40%{
+        background-color: red;
+        transform: scale(1.4);
+        top: 5%;
+    left: 0%;
+    }
+    80%{
+        background-color: blue;
+        transform: scale(0.7);
+        top: -20%;
+    left: 75%;
+    }
+    100%{
+        background-color: green;
+        transform: scale(0.9);
+        top: 25%;
+    left: 80%;
+    }
+}
+@keyframes popo3{
+    0%{
+        background-color: blue;
+        transform: scale(0.8);
+        top: -40%;
+    left: 43%;
+
+    }
+    40%{
+        background-color: red;
+        transform: scale(0.4);
+        top: 55%;
+    left: 13%;
+    }
+    80%{
+        background-color: green;
+        transform: scale(1.6);
+        top: 15%;
+    left: 89%;
+    }
+    100%{
+        background-color: blue;
+        transform: scale(0.8);
+        top: -40%;
+    left: 43%;
+
+    }
+}
+
+
+/* bird */
+.bird{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 0%;
+    left: 0%;
+    background-color: yellow;
+    animation: transformit 3s ease infinite;
+}
+.bird2{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 0%;
+    left: 0%;
+    background-color: yellow;
+    animation: transformit 3s .5s ease infinite;
+}
+@keyframes transformit{
+    0%{
+        top: 0%;
+        left: 0%;
+    }
+    25%{
+        top: 0%;
+        left:calc(100% - 30px);
+    }
+    50%{
+        top: calc(100% - 30px);
+        left: calc(100% - 30px);
+    }
+    75%{
+        top: calc(100% - 30px);
+        left: 0%;
+    }
+    100%{
+        top: 0%;
+        left: 0%;
+    }
+}
+@keyframes transformit2{
+    0%{
+        top: 30px;
+        left: 30px;
+    }
+    25%{
+        top: 30px;
+        left:calc(100% - 60px);
+    }
+    50%{
+        top: calc(100% - 60px);
+        left: calc(100% - 60px);
+    }
+    75%{
+        top: calc(100% - 60px);
+        left: 30px;
+    }
+    100%{
+        top: 30px;
+        left: 30px;
+    }
+}

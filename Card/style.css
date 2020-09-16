@@ -1,0 +1,230 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+@media screen and (max-width:768px){
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.card{    
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    position: relative;
+    margin: 20px;
+    margin-top: 100px;
+    width: 300px;
+    height: 250px;
+    background-color: #323650;
+    border-radius: 8px;
+    transition: height 0.3s linear;
+    text-align: center;
+    color: white;
+    font-family: Calibri,sans-serif;
+    font-weight: 700;
+    box-shadow: 13px 28px 20px -17px #0000009e;
+}
+.card:nth-child(2){
+    background-color: #e6e6e6;
+    color: black;
+}
+.card:nth-child(3){
+    background-color: #673ab7;
+}
+
+.parent{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.main-img{
+    width: 110px;
+    height: 110px;
+    background-image: url("me.jpg");
+    background-size: 100% 100%;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(95px,-70px);
+}
+.card:hover{
+    height: 430px;
+
+}
+.card:hover .main-img{
+    box-shadow: 0px 0px 5px 1px #2196f3;
+}
+.card:hover .hire-btn{
+    box-shadow: 0px 0px 5px 1px #ff25b3;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.content{
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10px;
+
+
+}
+hr{
+    width: 200px;
+    margin: auto;
+    border-color: #adafbb;
+}
+.content *{
+    margin-bottom: 8px;
+}
+.todo{
+    font-weight: 500;
+}
+.title{
+    font-size: 24px;
+    margin-top: 8px;
+}
+.job{
+    color: #adafbb;
+    text-transform: uppercase;
+}
+.hire-btn{
+    padding: 7px 35px;
+    color: white;
+    outline: none;
+    border-radius: 29px;
+    border-width: 0;
+    font-size: 17px;
+    background: linear-gradient(90deg, #8668eb,#ff25b3);
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 16px;
+}
+.social{
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.icon{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color:#8668eb;
+    margin: 10px auto;
+}
+.icon div{
+    width: 100%;
+    height:100% ;
+}
+.social-child p{
+    color: #adafbb;
+}
+.social-child{
+    cursor: pointer;
+}
+.social-child:hover .icon{
+    box-shadow: 0px 0px 5px 1px #2196f3;
+}
+.social-child h4{
+    font-size: 20px;
+}
+.icon-1{
+    background: linear-gradient(90deg, #b1237a,#db4185);
+ 
+}
+.icon-2{
+    background: linear-gradient(90deg, #0865fe,#34acf9);
+}
+.icon-3{
+    background: linear-gradient(90deg, #634eed,#609bfc);
+}
+.icon-1 div{
+    background-image:url("instagram.png");
+    background-position: center;
+    background-size: cover;
+ 
+}
+.icon-2 div{
+    background-image:url("youtube.png");
+    background-position: center;
+    background-size: cover;
+}
+.icon-3 div{
+    background-image:url("twitter.png");
+    background-position: center;
+    background-size: cover;
+}
+.dot{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 75%;
+    left: 75%;
+    background: linear-gradient(90deg, #8668eb,#ff25b3);
+    border-radius: 50%;
+    padding: 5px;
+}
+.dot div{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.sov{
+    fill: transparent;
+    stroke-width:2px;
+    stroke: white;
+    stroke-dasharray: 105;
+    stroke-dashoffset: 0;
+    /* transition: fill 1s ease; */
+    animation: anime-1 1s linear forwards;
+}
+.card:hover .sov {
+    animation: anime-2 1s linear forwards;
+}
+@keyframes anime-1{
+    0%{
+        stroke-dashoffset: 105;
+    }
+    80%{
+        stroke-dashoffset: 0;
+        stroke: white;
+        fill: transparent;
+    }
+    100%{
+        stroke-dashoffset: 0;
+        stroke: white;
+        fill: white;
+    }
+}
+@keyframes anime-2{
+    0%{
+        stroke-dashoffset: 105;
+    }
+    80%{
+        stroke-dashoffset: 0;
+        stroke: white;
+        fill: transparent;
+    }
+    100%{
+        stroke-dashoffset: 0;
+        stroke: white;
+        fill: white;
+    }
+}
